@@ -1,7 +1,8 @@
+import styles from './button.module.css'
 
 function Button({children, onClick}) { 
     return(
-        <button className="btn" onClick={onClick}> 
+        <button className={styles.btn} onClick={onClick}> 
             {children}
         </button>
     );

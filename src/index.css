@@ -1,16 +1,8 @@
 body {
   margin: 0;
   font-family: sans-serif;
-  background-color: #ffff;
-}
-
-.header {
-  position: sticky;
-  top: 0;
   background-color: #D9D9D9;
-  border-bottom: 1px solid #ccc;
-  padding: 1px;
-  z-index: 1000;
+  color: #353535;
 }
 
 .container {
@@ -19,15 +11,3 @@ body {
 }
 
 
-.btn {
-  padding: 8px 16px;
-  background-color: #3C6E71;
-  color: white;
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.btn:hover {
-  background-color: #333;
-}

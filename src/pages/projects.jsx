@@ -2,8 +2,8 @@
 function Porjects() {
     return (
         <div>
-            <h2>Porjects</h2>
-            <p1>Stuff about me...</p1>
+            <h2>PROJECTS</h2>
+            <p1></p1>
         </div>
     );
  }

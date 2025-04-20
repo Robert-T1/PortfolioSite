@@ -8,4 +8,20 @@ body {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 1rem;
+  color: #00000091;
+  background-color: #959595;
+  border-top: 1px solid #6d6d6d;
+  margin-top: 10rem;
+}
+

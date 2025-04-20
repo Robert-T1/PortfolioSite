@@ -1,0 +1,37 @@
+.skillbar {
+    margin-bottom: 1rem;
+  }
+  
+  .label {
+    font-weight: bold;
+    margin-bottom: 4px;
+    display: block;
+  }
+  
+  .barContainer {
+    position: relative;
+    height: 32px;
+    width: 256px;
+    border: 3px solid #ccc;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: #fff;
+  }
+  
+  .barFill {
+    height: 100%;
+    border-radius: 9px;
+    transition: width 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .levelText {
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 0.9rem;
+    pointer-events: none;
+  }
+  

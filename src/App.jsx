@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import './App.css'
 import Header from './components/Header'
+import Footer from './components/Footer'
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 import About from './pages/about';
 import Projects from './pages/projects';
 import Skills from './pages/skills';
@@ -27,6 +28,8 @@ function App() {
           <Route path="/timeline" element={<Timeline />} />
           <Route path="/justkeepdigging" element={<JustKeepDigging />} />
         </Routes>
+
+        <Footer />
     </Router>
     </>
   )

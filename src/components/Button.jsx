@@ -4,8 +4,10 @@ function Button({children, onClick, imageSrc, alt, style, href }) {
 
     const button = (
         <button className={style} onClick={onClick} href={href}> 
-            <img src={imageSrc} alt={alt} />
-            {children}
+            <div>
+                <img src={imageSrc} alt={alt} />
+                <span >{children}</span>
+            </div>
         </button>
     );
 

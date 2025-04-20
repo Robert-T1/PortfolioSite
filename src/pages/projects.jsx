@@ -1,11 +1,80 @@
+import { Link } from "react-router-dom"
+import styles from './projects.module.css'
+import Button from '../components/Button'
+import GridHolder from '../components/GridHolder'
+import buttonStyles from '../components/button.module.css'
+
+const projectImages = import.meta.glob('../assets/images/projectIcons/*.png', { eager: true });
+import tempPfpIcon from '../assets/images/temp_pfp_.jpg'
+
 
 function Porjects() {
     return (
-        <div>
+        <div className={styles.projectsContainer}>
             <h2>PROJECTS</h2>
-            <p1></p1>
+            <p1 className={styles.description}>A snapshot of noteable projects I've worked on.</p1>
+            <GridHolder columns={4}>
+                <div className={styles.projectWrapper}>
+                    <Link to="/justkeepdigging">
+                        <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("justKeepDiggingIcon")}></Button>
+                    </Link>
+                    <span className={styles.projectLabel}>Just Keep Digging</span>
+                </div>
+                <div className={styles.projectWrapper}>
+                    <Link to="/littlecircuit">
+                        <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("littleCircuitIcon")}></Button>
+                    </Link>
+                    <span className={styles.projectLabel}>Just Keep Digging</span>
+                </div>
+                <div className={styles.projectWrapper}>
+                    <Link to="/chromathief">
+                        <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("chromaThiefIcon")}></Button>
+                    </Link>
+                    <span className={styles.projectLabel}>Chroma Thief</span>
+                </div>
+
+                <div className={styles.projectWrapper}>
+                    <Link to="/bankbot">
+                        <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("bankBotIcon")}></Button>
+                    </Link>
+                    <span className={styles.projectLabel}>Bank Bot</span>
+                </div>
+
+                <div className={styles.projectWrapper}>
+                    <Link to="/justkeepdiggingbot">
+                        <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("chromaThiefIcon")}></Button>
+                    </Link>
+                    <span className={styles.projectLabel}>Chroma Thief</span>
+                </div>
+
+                <div className={styles.projectWrapper}>
+                    <Link to="/clansandclaims">
+                        <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("chromaThiefIcon")}></Button>
+                    </Link>
+                    <span className={styles.projectLabel}>Clans And Claims</span>
+                </div>
+
+                <div className={styles.projectWrapper}>
+                    <Link to="/portfoliosite">
+                        <Button style={buttonStyles.btn_project} imageSrc={tempPfpIcon}></Button>
+                    </Link>
+                    <span className={styles.projectLabel}>Portfoilo Site</span>
+                </div>
+
+                <div className={styles.projectWrapper}>
+                    <Link to="/gardengame">
+                        <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("gardenGameIcon")}></Button>
+                    </Link>
+                    <span className={styles.projectLabel}>Garden Game</span>
+                </div>
+                
+            </GridHolder>
         </div>
     );
+ }
+
+ function getProjectIcon(name) { 
+   return projectImages[`../assets/images/projectIcons/${name}.png`]?.default;
  }
 
  export default Porjects;

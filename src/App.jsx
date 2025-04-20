@@ -7,6 +7,8 @@ import Projects from './pages/projects';
 import Skills from './pages/skills';
 import Employment from './pages/employment';
 import Timeline from './pages/timeline';
+import JustKeepDigging from './pages/projectpages/justKeepDigging'; 
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -23,6 +25,7 @@ function App() {
           <Route path="/skills" element={<Skills />} />
           <Route path="/employment" element={<Employment />} />
           <Route path="/timeline" element={<Timeline />} />
+          <Route path="/justkeepdigging" element={<JustKeepDigging />} />
         </Routes>
     </Router>
     </>

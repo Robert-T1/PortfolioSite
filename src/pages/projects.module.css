@@ -1,0 +1,34 @@
+.projectsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .description { 
+    padding-bottom: 2%;
+  }
+
+  .projectWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  
+  .projectLabel {
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-top: 6px;
+    pointer-events: none;
+  }
+  
+  .projectWrapper:hover .projectLabel {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  

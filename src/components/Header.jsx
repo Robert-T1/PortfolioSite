@@ -24,7 +24,6 @@ function Header() {
                     <Link to="/Projects"><Button style={buttonStyles.btn}>PROJECTS</Button></Link>
                     <Link to="/Skills"><Button style={buttonStyles.btn}>SKILLS</Button></Link>
                     <Link to="/Employment"><Button style={buttonStyles.btn}>EMPLOYMENT</Button></Link>
-                    <Link to="/Timeline"><Button style={buttonStyles.btn}>TIMELINE</Button></Link>
                 </nav>
             </div>
         </header>

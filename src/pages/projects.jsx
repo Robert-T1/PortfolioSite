@@ -5,8 +5,7 @@ import GridHolder from '../components/GridHolder'
 import buttonStyles from '../components/button.module.css'
 
 const projectImages = import.meta.glob('../assets/images/projectIcons/*.png', { eager: true });
-import tempPfpIcon from '../assets/images/temp_pfp_.jpg'
-
+import siteIcon from '../assets/images/siteIcon.png'
 
 function Porjects() {
     return (
@@ -24,7 +23,7 @@ function Porjects() {
                     <Link to="/littlecircuit">
                         <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("littleCircuitIcon")}></Button>
                     </Link>
-                    <span className={styles.projectLabel}>Just Keep Digging</span>
+                    <span className={styles.projectLabel}>Little Circuit</span>
                 </div>
                 <div className={styles.projectWrapper}>
                     <Link to="/chromathief">
@@ -42,21 +41,21 @@ function Porjects() {
 
                 <div className={styles.projectWrapper}>
                     <Link to="/justkeepdiggingbot">
-                        <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("chromaThiefIcon")}></Button>
+                        <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("justkeepdiggingbotIcon")}></Button>
                     </Link>
-                    <span className={styles.projectLabel}>Chroma Thief</span>
+                    <span className={styles.projectLabel}>Just Keep Digging Bot</span>
                 </div>
 
                 <div className={styles.projectWrapper}>
                     <Link to="/clansandclaims">
-                        <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("chromaThiefIcon")}></Button>
+                        <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("clansandclaimsIcon")}></Button>
                     </Link>
                     <span className={styles.projectLabel}>Clans And Claims</span>
                 </div>
 
                 <div className={styles.projectWrapper}>
                     <Link to="/portfoliosite">
-                        <Button style={buttonStyles.btn_project} imageSrc={tempPfpIcon}></Button>
+                        <Button style={buttonStyles.btn_project} imageSrc={siteIcon}></Button>
                     </Link>
                     <span className={styles.projectLabel}>Portfoilo Site</span>
                 </div>
@@ -67,7 +66,6 @@ function Porjects() {
                     </Link>
                     <span className={styles.projectLabel}>Garden Game</span>
                 </div>
-                
             </GridHolder>
         </div>
     );

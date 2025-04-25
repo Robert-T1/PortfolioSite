@@ -11,8 +11,18 @@
     text-align: center;
   }
 
-.gallery img
-{ 
+  .gallery img {
     padding-bottom: 2%;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    max-width: 100%;      
+    max-height: 400px;   
+    height: auto;         
+    width: auto;         
+    object-fit: contain; 
+}
+
+
+.links {
+    display: flex;
+    gap: 8px;
 }

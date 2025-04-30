@@ -23,7 +23,7 @@ export default function About() {
         Currently, I’m a full‑time Game Developer at my independent studio,
         <strong> RELT Games</strong>, where I'm preparing to publish my second
         Steam game, <em>Just Keep Digging</em>. Over the past four years, I’ve
-        relentlessly sharpened my skills across software development, game
+        worked to sharpened my skills across software development, game
         design, web development, and more—building multiple projects from
         scratch and seeing them through to release.
       </p>

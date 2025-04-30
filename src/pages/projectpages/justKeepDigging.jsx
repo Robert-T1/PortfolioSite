@@ -28,7 +28,7 @@ function JustKeepDigging() {
             <h4>Reflections</h4>
             <p className={styles.descrptionText}>
                 At the time of writing this, Just Keep Digging has an expected release in May, on Steam. 
-                Just Keep Digging is the most ambitious project I've worked on to-date, with almost 1 year of development and just under 1,000 hours of development time as well writing over 11,000 lines of code, Just Keep Digging has been a huge project for me as an individual to take on, both in its complexity (procedural generation, saving state huge open world, enemy AI, GUI, effects system, ect) and time commitment.
+                Just Keep Digging is the most ambitious project I've worked on to-date, with almost 1 year of development and just under 1,000 hours of development time as well as writing over 11,000 lines of code, Just Keep Digging has been a huge project for me as an individual to take on, both in its complexity (procedural generation, saving state, huge open world, enemy AI, GUI, effects system, etc) and time commitment.
             </p>
 
             <h4>Links</h4>

@@ -1,5 +1,3 @@
-import React from 'react';
-
 function Button({ children, onClick, imageSrc, alt, style, href }) {
   const isLink = href && href.trim() !== "";
   const content = (

@@ -3,7 +3,7 @@ import Skill from '../../components/Skill';
 import Button from '../../components/Button'
 import buttonStyles from '../../components/button.module.css'
 
-import robloxIcon from '../../assets/images/robloxIcon.png'
+import robloxIcon from '../../assets/images/projectIcons/clansandclaimsIcon.png'
 import ss1 from '../../assets/images/projectIcons/cac_ss1.png'
 import ss2 from '../../assets/images/projectIcons/cac_ss2.png'
 import ss3 from '../../assets/images/projectIcons/cac_ss3.png'

@@ -1,5 +1,4 @@
 import styles from './skillbar.module.css';
-import React from 'react';
 
 function getColor(value) {
   const r = Math.round(255 - (value * 2.55));

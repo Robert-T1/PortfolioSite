@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from './Button';
 
-import gitHubIcon from '../assets/images/gitHub_icon.png';
+import gitHubIcon from '../assets/images/github_icon.png';
 import reltgamesIcon from '../assets/images/reltgames_icon.svg';
 import linkedInIcon from '../assets/images/linkedIn_icon.png';
 import emailIcon from '../assets/images/email_icon.png';

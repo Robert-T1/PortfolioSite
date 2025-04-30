@@ -4,7 +4,7 @@ import Button from '../../components/Button'
 import buttonStyles from '../../components/button.module.css'
 
 import trelloIcon from '../../assets/images/trelloIcon.png'
-import githubIcon from '../../assets/images/github_Icon.png'
+import githubIcon from '../../assets/images/github_icon.png'
 
 function PortfolioSite() {
     return (

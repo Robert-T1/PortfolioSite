@@ -3,7 +3,7 @@ import Skill from '../../components/Skill';
 import Button from '../../components/Button'
 import buttonStyles from '../../components/button.module.css'
 
-import githubIcon from '../../assets/images/github_Icon.png'
+import githubIcon from '../../assets/images/github_icon.png'
 
 function BankBot() {
     return (

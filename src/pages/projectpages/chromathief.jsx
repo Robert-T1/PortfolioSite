@@ -4,7 +4,7 @@ import Button from '../../components/Button'
 import buttonStyles from '../../components/button.module.css'
 
 import itchioIcon from '../../assets/images/itchioIcon.png'
-import githubIcon from '../../assets/images/github_Icon.png'
+import githubIcon from '../../assets/images/github_icon.png'
 import ss1 from '../../assets/images/projectIcons/ct_ss1.png'
 import ss2 from '../../assets/images/projectIcons/ct_ss2.png'
 import ss3 from '../../assets/images/projectIcons/ct_ss3.png'

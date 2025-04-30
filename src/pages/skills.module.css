@@ -4,3 +4,13 @@
     margin: 0 auto;
     text-align: center;
   }
+
+  .skillSection h3 { 
+    padding-top: 15%;
+    color: black;
+  }
+
+  .skillSection h4 { 
+    padding-top: 5%;
+    font-style: italic;
+  }

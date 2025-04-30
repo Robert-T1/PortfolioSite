@@ -48,7 +48,7 @@ function Skills() {
     <div className="container">
       <h2 className={styles.sectionTitle}>SKILLS</h2>
       <p className={styles.description}>
-        A self-evaluated list of notable skills, assessed based on time spent and overlap with related skills. 
+        A self-evaluated list of notable skills, assessed based on time spent and familiarity with related technologies. 
         This provides an honest representation of proficiency in the skill bars below.
       </p>
       
@@ -59,17 +59,54 @@ function Skills() {
       </div>
       
       <div className={styles.skillSection}>
-      <h4>Programming Languages</h4>
-            <SkillBar level={85}>C#</SkillBar>
-            <SkillBar level={65}>JavaScript</SkillBar>
-            <SkillBar level={65}>C++</SkillBar>
-            <SkillBar level={60}>Lua</SkillBar>
-            <SkillBar level={40}>Python</SkillBar>
-            <SkillBar level={30}>C</SkillBar>
+        <h3>Programming Languages</h3>
+        <SkillBar level={85}>C#</SkillBar>
+        <SkillBar level={65}>JavaScript</SkillBar>
+        <SkillBar level={60}>C++</SkillBar>
+        <SkillBar level={60}>Lua</SkillBar>
+        <SkillBar level={40}>Python</SkillBar>
+        <SkillBar level={30}>C</SkillBar>
 
-            <h4>Declarative Languages</h4>
-            <SkillBar level={55}>HTML</SkillBar>
-            <SkillBar level={45}>CSS</SkillBar>
+        <h4>Declarative Languages</h4>
+        <SkillBar level={55}>HTML</SkillBar>
+        <SkillBar level={45}>CSS</SkillBar>
+
+        <h3>Technologies</h3> 
+        <SkillBar level={60}>MongdoDB</SkillBar>
+        <SkillBar level={55}>React</SkillBar>
+        <SkillBar level={55}>Node.js</SkillBar>
+        <SkillBar level={45}>Docker</SkillBar>
+
+        <h4>Version Control</h4>
+        <SkillBar level={65}>Plastic SCM</SkillBar>
+        <SkillBar level={55}>Git</SkillBar>
+
+        <h4>Game Engines</h4>
+        <SkillBar level={75}>Unity</SkillBar>
+        <SkillBar level={50}>Godot</SkillBar>
+        <SkillBar level={45}>Unreal</SkillBar>
+
+        <h4>Specifications</h4>
+        <SkillBar level={40}>OpenGL</SkillBar>
+        <SkillBar level={30}>DirectX</SkillBar>
+
+        <h3>Testing & QA</h3>
+        <SkillBar level={60}>Unity Test Framework</SkillBar>
+        <SkillBar level={55}>Vitest</SkillBar>
+
+        <h3>Networking & Infrastructure</h3>
+        <SkillBar level={70}>Client-Server Architecture</SkillBar>
+        <SkillBar level={60}>Socket Networking</SkillBar>
+        <SkillBar level={55}>Cloud Deployment</SkillBar>
+
+
+        <h3> Programming Concepts</h3>
+        <SkillBar level={80}>Component-Based Architecture</SkillBar>
+        <SkillBar level={80}>OOP</SkillBar>
+        <SkillBar level={75}>Debugging & Profiling</SkillBar>
+        <SkillBar level={65}>Unit Testing</SkillBar>
+        <SkillBar level={45}>ECS</SkillBar>
+
       </div>
     </div>
   );

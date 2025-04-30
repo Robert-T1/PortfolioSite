@@ -27,6 +27,7 @@ function App() {
       <Router>
         <Header />
         
+        <title>Robert Thompson | Portfolio</title>
         <link rel="icon" type="image/png" href={siteIcon} />
 
         <Routes>

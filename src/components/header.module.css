@@ -20,4 +20,23 @@
   .right {
     flex: 1;
   }
+
+  .copiedTooltip {
+    position: fixed;
+    background-color: #142531;
+    color: white;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 9999;
+    animation: fadeOut 1.5s forwards;
+  }
+  
+  @keyframes fadeOut {
+    0% { opacity: 0.95; }
+    80% { opacity: 0.95; }
+    100% { opacity: 0; }
+  }
+  
   

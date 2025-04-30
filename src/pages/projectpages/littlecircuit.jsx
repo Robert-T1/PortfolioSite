@@ -35,7 +35,7 @@ function LittleCircuit() {
             <h4>Links</h4>
             <div className={styles.links}>
                 <Button style={buttonStyles.btn_img} imageSrc={steamIcon} href="https://store.steampowered.com/app/2207640/Little_Circuit/"></Button>
-                <Button style={buttonStyles.btn_img} imageSrc={trackIcon} href="https://www.youtube.com/watch?v=MRL6DW1qNUw&list=PLkgVCy3wDQ21CY5Rj0q80ImNRMJjEvH81&index=1"></Button>
+                <Button style={buttonStyles.btn_img} imageSrc={trackIcon} href="https://www.youtube.com/watch?v=MRL6DW1qNUw&list=OLAK5uy_mg7W9L2_-TlhMni-jt5g-QyqtcJ7xxQew"></Button>
             </div>
 
             <h4>Gallery</h4>

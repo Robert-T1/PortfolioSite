@@ -92,7 +92,7 @@ function Skills() {
 
         <h3>Testing & QA</h3>
         <SkillBar level={60}>Unity Test Framework</SkillBar>
-        <SkillBar level={55}>Vitest</SkillBar>
+        <SkillBar level={50}>Vitest</SkillBar>
 
         <h3>Networking & Infrastructure</h3>
         <SkillBar level={70}>Client-Server Architecture</SkillBar>
@@ -104,7 +104,7 @@ function Skills() {
         <SkillBar level={80}>Component-Based Architecture</SkillBar>
         <SkillBar level={80}>OOP</SkillBar>
         <SkillBar level={75}>Debugging & Profiling</SkillBar>
-        <SkillBar level={65}>Unit Testing</SkillBar>
+        <SkillBar level={55}>Unit Testing</SkillBar>
         <SkillBar level={45}>ECS</SkillBar>
 
       </div>

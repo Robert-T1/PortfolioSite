@@ -1,23 +1,27 @@
+import React from 'react';
 
-function Button({children, onClick, imageSrc, alt, style, href }) { 
-    const isLink = href && href.trim() !== "";
+function Button({ children, onClick, imageSrc, alt, style, href }) {
+  const isLink = href && href.trim() !== "";
+  const content = (
+    <div>
+      <img src={imageSrc} alt={alt} />
+      <span>{children}</span>
+    </div>
+  );
 
-    const button = (
-        <button className={style} onClick={onClick} href={href}> 
-            <div>
-                <img src={imageSrc} alt={alt} />
-                <span >{children}</span>
-            </div>
-        </button>
+  if (isLink) {
+    return (
+      <a href={href} className={style} target="_blank" rel="noopener noreferrer">
+        {content}
+      </a>
     );
+  }
 
-    return isLink ? (
-        <a href={href} target="_blank" rel="noopener noreferrer">
-          {button}
-        </a>
-      ) : (
-        button
-      );
+  return (
+    <button className={style} onClick={onClick}>
+      {content}
+    </button>
+  );
 }
 
 export default Button;

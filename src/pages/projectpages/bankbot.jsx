@@ -30,7 +30,7 @@ function BankBot() {
 
             <h4>Links</h4>
             <div className={styles.links}>
-                <Button style={buttonStyles.btn_img} imageSrc={githubIcon} href="https://github.com/Robert-T1/Chroma-Thief"></Button>
+                <Button style={buttonStyles.btn_img} imageSrc={githubIcon} href="https://github.com/Robert-T1/Bank-Discord-Bot"></Button>
             </div>
 
         </div>

@@ -1,4 +1,5 @@
 import styles from './about.module.css';
+import pufaImage from '../assets/images/pufa.jpg'
 
 export default function About() {
   return (
@@ -42,8 +43,14 @@ export default function About() {
 
       <p className={styles.bio}>
         In my spare time, I enjoy gardening, hiking, reading, and spending time
-        with my dog, George.
-      </p>
+        with my cat, <span className={styles.hoverImage}>Pufa
+            <img
+            src={pufaImage}
+            alt="Pufa the cat"
+                    className={styles.popupImg}
+            />
+            </span>.
+        </p>
     </section>
   );
 }

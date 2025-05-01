@@ -60,42 +60,42 @@ function Skills() {
       
       <div className={styles.skillSection}>
         <h3>Programming Languages</h3>
-        <SkillBar level={85}>C#</SkillBar>
-        <SkillBar level={65}>JavaScript</SkillBar>
-        <SkillBar level={60}>C++</SkillBar>
-        <SkillBar level={60}>Lua</SkillBar>
-        <SkillBar level={40}>Python</SkillBar>
-        <SkillBar level={30}>C</SkillBar>
+        <SkillBar level={80}>C#</SkillBar>
+        <SkillBar level={60}>JavaScript</SkillBar>
+        <SkillBar level={50}>C++</SkillBar>
+        <SkillBar level={50}>Lua</SkillBar>
+        <SkillBar level={35}>Python</SkillBar>
+        <SkillBar level={25}>C</SkillBar>
 
         <h4>Declarative Languages</h4>
         <SkillBar level={55}>HTML</SkillBar>
         <SkillBar level={45}>CSS</SkillBar>
 
         <h3>Technologies</h3> 
-        <SkillBar level={60}>MongdoDB</SkillBar>
+        <SkillBar level={55}>MongdoDB</SkillBar>
         <SkillBar level={55}>React</SkillBar>
         <SkillBar level={55}>Node.js</SkillBar>
-        <SkillBar level={45}>Docker</SkillBar>
+        <SkillBar level={35}>Docker</SkillBar>
 
         <h4>Version Control</h4>
-        <SkillBar level={65}>Plastic SCM</SkillBar>
-        <SkillBar level={55}>Git</SkillBar>
+        <SkillBar level={60}>Plastic SCM</SkillBar>
+        <SkillBar level={50}>Git</SkillBar>
 
         <h4>Game Engines</h4>
         <SkillBar level={75}>Unity</SkillBar>
-        <SkillBar level={50}>Godot</SkillBar>
-        <SkillBar level={45}>Unreal</SkillBar>
+        <SkillBar level={45}>Godot</SkillBar>
+        <SkillBar level={35}>Unreal</SkillBar>
 
         <h4>Specifications</h4>
-        <SkillBar level={40}>OpenGL</SkillBar>
-        <SkillBar level={30}>DirectX</SkillBar>
+        <SkillBar level={35}>OpenGL</SkillBar>
+        <SkillBar level={20}>DirectX</SkillBar>
 
         <h3>Testing & QA</h3>
         <SkillBar level={60}>Unity Test Framework</SkillBar>
-        <SkillBar level={50}>Vitest</SkillBar>
+        <SkillBar level={40}>Vitest</SkillBar>
 
         <h3>Networking & Infrastructure</h3>
-        <SkillBar level={70}>Client-Server Architecture</SkillBar>
+        <SkillBar level={65}>Client-Server Architecture</SkillBar>
         <SkillBar level={60}>Socket Networking</SkillBar>
         <SkillBar level={55}>Cloud Deployment</SkillBar>
 

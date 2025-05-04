@@ -114,7 +114,7 @@ function Skills() {
 
 function getSkillLabel(level) {
   if (level <= 20) return 'Novice';
-  if (level <= 40) return 'Beginner';
+  if (level <= 40) return 'Familiar';
   if (level <= 60) return 'Intermediate';
   if (level <= 80) return 'Advanced';
   return 'Expert';

@@ -24,7 +24,7 @@ function Header() {
     return (
         <header className={styles.header}>
             <div className={styles.headerContent}>
-                <nav className={styles.center}>
+                <nav className={`${styles.navSection} ${styles.socialLinks}`}>
                     <Button
                         style={buttonStyles.btn_img}
                         imageSrc={emailIcon}
@@ -45,23 +45,23 @@ function Header() {
                         imageSrc={reltgamesIcon}
                         href="https://reltgames.com/"
                     />
-
-                    {copied && (
-                        <div
-                            className={styles.copiedTooltip}
-                            style={{ top: mousePos.y + 15, left: mousePos.x + 10 }}
-                        >
-                            Copied!
-                        </div>
-                    )}
                 </nav>
 
-                <nav className={styles.center}>
+                <nav className={`${styles.navSection} ${styles.navLinks}`}>
                     <Link to="/about"><Button style={buttonStyles.btn}>ABOUT</Button></Link>
                     <Link to="/Projects"><Button style={buttonStyles.btn}>PROJECTS</Button></Link>
                     <Link to="/Skills"><Button style={buttonStyles.btn}>SKILLS</Button></Link>
                     <Link to="/Employment"><Button style={buttonStyles.btn}>EMPLOYMENT</Button></Link>
                 </nav>
+
+                {copied && (
+                    <div
+                        className={styles.copiedTooltip}
+                        style={{ top: mousePos.y + 15, left: mousePos.x + 10 }}
+                    >
+                        Copied!
+                    </div>
+                )}
             </div>
         </header>
     );

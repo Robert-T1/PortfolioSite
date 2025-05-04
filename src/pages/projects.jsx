@@ -1,18 +1,17 @@
 import { Link } from "react-router-dom"
 import styles from './projects.module.css'
 import Button from '../components/Button'
-import GridHolder from '../components/GridHolder'
 import buttonStyles from '../components/button.module.css'
 
 const projectImages = import.meta.glob('../assets/images/projectIcons/*.png', { eager: true });
 import siteIcon from '../assets/images/siteIcon.png'
 
-function Porjects() {
+function Projects() {
     return (
         <div className={styles.projectsContainer}>
             <h2>PROJECTS</h2>
-            <p1 className={styles.description}>A snapshot of noteable projects I've worked on.</p1>
-            <GridHolder columns={4}>
+            <p className={styles.description}>A snapshot of noteable projects I've worked on.</p>
+            <div className={styles.projectsGrid}>
                 <div className={styles.projectWrapper}>
                     <Link to="/justkeepdigging">
                         <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("justKeepDiggingIcon")}></Button>
@@ -31,48 +30,43 @@ function Porjects() {
                     </Link>
                     <span className={styles.projectLabel}>Chroma Thief</span>
                 </div>
-
                 <div className={styles.projectWrapper}>
                     <Link to="/bankbot">
                         <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("bankBotIcon")}></Button>
                     </Link>
                     <span className={styles.projectLabel}>Bank Bot</span>
                 </div>
-
                 <div className={styles.projectWrapper}>
                     <Link to="/justkeepdiggingbot">
                         <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("justkeepdiggingbotIcon")}></Button>
                     </Link>
                     <span className={styles.projectLabel}>Just Keep Digging Bot</span>
                 </div>
-
                 <div className={styles.projectWrapper}>
                     <Link to="/clansandclaims">
                         <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("clansandclaimsIcon")}></Button>
                     </Link>
                     <span className={styles.projectLabel}>Clans And Claims</span>
                 </div>
-
                 <div className={styles.projectWrapper}>
                     <Link to="/portfoliosite">
                         <Button style={buttonStyles.btn_project} imageSrc={siteIcon}></Button>
                     </Link>
-                    <span className={styles.projectLabel}>Portfoilo Site</span>
+                    <span className={styles.projectLabel}>Portfolio Site</span>
                 </div>
-
                 <div className={styles.projectWrapper}>
                     <Link to="/gardengame">
                         <Button style={buttonStyles.btn_project} imageSrc={getProjectIcon("gardenGameIcon")}></Button>
                     </Link>
                     <span className={styles.projectLabel}>Garden Game</span>
                 </div>
-            </GridHolder>
+            </div>
         </div>
     );
- }
+}
 
- function getProjectIcon(name) { 
-   return projectImages[`../assets/images/projectIcons/${name}.png`]?.default;
- }
+function getProjectIcon(name) { 
+  return projectImages[`../assets/images/projectIcons/${name}.png`]?.default;
+}
 
- export default Porjects;
+export default Projects;

@@ -10,40 +10,26 @@ export default function About() {
         <div className={styles.intro}>
           <h2>Robert Thompson</h2>
           <p className={styles.tagline}>
-            I build software to bring value to people.
+            Hello, I’m Robert. I like making video games and software that are fun, useful, and cool.
           </p>
         </div>
       </div>
       <p className={styles.bio}>
-        I’m a developer passionate about creating functional, performant, user-friendly software.
-         I mix creativity with meticulous engineering to craft software that delivers real value.
+       I run my own indie studio, RELT Games, where I’ve spent the last four years developing and publishing
+        projects on Steam, Itchio, and Google play, as well as experimenting with prototypes and game jams.
+        Most recently, I released my second Steam title, Just Keep Digging. It was my biggest project yet, almost
+        a year of work and over a thousand development hours, and it’s been well received, earning a 96% positive
+        rating on Steam and reviewed by creators like Blitz (4.3M subscribers).
       </p>
 
       <p className={styles.bio}>
-        Currently, I’m a full‑time Game Developer at my independent studio,
-        <strong> RELT Games</strong>, where I'm preparing to publish my second
-        Steam game, <em>Just Keep Digging</em>. Over the past four years, I’ve
-        worked to sharpened my skills across software development, game
-        design, web development, and more—building multiple projects from
-        scratch and seeing them through to release.
+       Looking ahead, I’m excited to collaborate with a team on projects bigger than one person can tackle alone.
+        My skills span the full development pipeline, with strengths in gameplay programming, networking, VR/AR, mobile, UI/UX, and QA.
+        I adapt quickly and can jump into any specialty as needed.
       </p>
 
       <p className={styles.bio}>
-        Alongside my development work, I maintain a part‑time role as a cashier
-        at Lowe’s, ensuring stable income as I continue growing my skills,
-        career, and studio.
-      </p>
-
-      <p className={styles.bio}>
-        With a strong foundation built through independent development and
-        real‑world publishing experience, I’m excited to take on new challenges
-        and opportunities—and to continue creating software that brings value
-        to others.
-      </p>
-
-      <p className={styles.bio}>
-        In my spare time, I enjoy gardening, hiking, reading, and spending time
-        with my cat, <span className={styles.hoverImage}>Pufa
+        Also, here is my cat <span className={styles.hoverImage}>Pufa
             <img
             src={pufaImage}
             alt="Pufa the cat"

@@ -91,7 +91,8 @@ function Skills() {
         <SkillBar level={20}>DirectX</SkillBar>
 
         <h3>Testing & QA</h3>
-        <SkillBar level={60}>Unity Test Framework</SkillBar>
+        <SkillBar level={70}>Manual Game Testing</SkillBar>
+        <SkillBar level={50}>Unity Test Framework</SkillBar>
         <SkillBar level={40}>Vitest</SkillBar>
 
         <h3>Networking & Infrastructure</h3>

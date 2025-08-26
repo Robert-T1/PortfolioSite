@@ -1,12 +1,35 @@
-# React + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal website showcasing my professional work, employment history, accomplishments, skills, and general background.
 
-Currently, two official plugins are available:
+## 🔎 Overview
+This site serves as my central hub for presenting my projects, career timeline, and technical skills.  
+It was rebuilt from my original static HTML/CSS/JS version into a more modern, flexible, and maintainable web application.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Projects** → Published and personal projects with detailed pages  
+- **Employment** → Work history and experience capsules  
+- **Skills** → Categorized technical skills with visual indicators  
+- **Timeline** → Chronological view of career milestones  
+- **About** → Profile, bio, and background  
 
-## Expanding the ESLint configuration
+## 🛠 Tech Stack
+- **Frontend:** React (with TailwindCSS + shadcn/ui)  
+- **Backend / Auth:** Node.js (planned server-side authentication)  
+- **Deployment:** Vercel  
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Features
+- Responsive and modern design  
+- Clean UI with animations and grid-based layout  
+- Organized sections for easy navigation  
+- Source code structured for scalability  
+
+## 📌 Development
+You can follow the development process here: https://trello.com/b/OJpdBZNv/portfoilo-website  
+
+## 📂 Setup
+Clone the repo and install dependencies:
+```bash
+git clone https://github.com/your-username/portfolio-site.git
+cd portfolio-site
+npm install
+npm run dev

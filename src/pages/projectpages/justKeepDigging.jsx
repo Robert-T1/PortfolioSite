@@ -27,14 +27,14 @@ function JustKeepDigging() {
 
             <h4>Reflections</h4>
             <p className={styles.descrptionText}>
-                At the time of writing this, Just Keep Digging has an expected release in May, on Steam. 
-                Just Keep Digging is the most ambitious project I've worked on to-date, with almost 1 year of development and just under 1,000 hours of development time as well as writing over 11,000 lines of code, Just Keep Digging has been a huge project for me as an individual to take on, both in its complexity (procedural generation, saving state, huge open world, enemy AI, GUI, effects system, etc) and time commitment.
+               Just Keep Digging released on Steam on July 11, 2025. It’s the most ambitious project I’ve worked on to date, with nearly a year of development, just under 1,000 hours of work, and over 13,000 lines of code. The project was a huge undertaking for me as a solo developer, both in terms of its complexity (procedural generation, save system, large open world, enemy AI, GUI, effects system, etc.) and the overall time commitment.
+                The reception has been incredibly rewarding, with the game earning a 96% positive rating on Steam and coverage from creators like Blitz along with others.
             </p>
 
             <h4>Links</h4>
              <div className={styles.links}>
                 <Button style={buttonStyles.btn_img} imageSrc={steamIcon} href="https://store.steampowered.com/app/2974660/Just_Keep_Digging/"></Button>
-                <Button style={buttonStyles.btn_img} imageSrc={youtubeIcon} href="https://www.youtube.com/watch?v=rR4JllhXzWI"></Button>
+                <Button style={buttonStyles.btn_img} imageSrc={youtubeIcon} href="https://www.youtube.com/watch?v=4HXXo21fTw0&t"></Button>
             </div>
 
             <h4>Gallery</h4>

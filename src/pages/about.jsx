@@ -10,7 +10,7 @@ export default function About() {
         <div className={styles.intro}>
           <h2>Robert Thompson</h2>
           <p className={styles.tagline}>
-            Hello, I’m Robert. I like making video games and software that are fun, useful, and cool.
+           I like making video games and software that are fun, useful, and cool.
           </p>
         </div>
       </div>

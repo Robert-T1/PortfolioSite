@@ -64,7 +64,7 @@ function Skills() {
         <SkillBar level={60}>JavaScript</SkillBar>
         <SkillBar level={50}>C++</SkillBar>
         <SkillBar level={50}>Lua</SkillBar>
-        <SkillBar level={35}>Python</SkillBar>
+        <SkillBar level={45}>Python</SkillBar>
         <SkillBar level={25}>C</SkillBar>
 
         <h4>Declarative Languages</h4>

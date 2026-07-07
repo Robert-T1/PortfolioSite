@@ -1,4 +1,11 @@
+.description {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: var(--ink-soft);
+}
 
-.description { 
-    padding-bottom: 2%;
+.reference {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
 }

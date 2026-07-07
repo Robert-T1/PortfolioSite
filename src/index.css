@@ -1,27 +1,122 @@
-body {
-  margin: 0;
-  font-family: sans-serif;
-  background-color: #D9D9D9;
-  color: #353535;
+:root {
+  /* Palette */
+  --bg: #f7f8fb;
+  --surface: #ffffff;
+  --ink: #1c2033;
+  --ink-soft: #5a6072;
+  --ink-faint: #8b90a0;
+  --accent: #4d99e4;
+  --accent-strong: #2b7bc9;
+  --accent-soft: #e6f1fc;
+  --accent-ink: #ffffff;
+  --border: #e5e6ef;
+
+  /* Brand accents */
+  --c-yellow: #fbef5b;
+  --c-blue: #4d99e4;
+  --c-red: #fb5b5b;
+  --c-green: #5bfb5b;
+
+  /* Elevation */
+  --shadow-sm: 0 1px 2px rgba(28, 32, 51, 0.06), 0 1px 3px rgba(28, 32, 51, 0.08);
+  --shadow-md: 0 4px 12px rgba(28, 32, 51, 0.1);
+  --shadow-lg: 0 8px 24px rgba(28, 32, 51, 0.14);
+
+  /* Shape */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+
+  font-family: 'Segoe UI', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+a {
+  color: var(--accent);
+}
+
+/* App shell: keeps the footer at the bottom without margin hacks */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.app > main {
+  flex: 1;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* Generic centered page container (used by several pages) */
 .container {
-  max-width: 1300px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 4vw, 2rem);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
+}
+
+/* Shared page title style */
+.pageTitle {
+  font-size: clamp(1.6rem, 4vw, 2.2rem);
+  letter-spacing: 0.08em;
+  margin: 0 0 0.5rem;
+}
+
+.pageTitle::after {
+  content: '';
+  display: block;
+  width: 4rem;
+  height: 4px;
+  margin: 0.6rem auto 0;
+  border-radius: 2px;
+  background: var(--page-accent, var(--accent));
 }
 
 .footer {
+  position: relative;
+  z-index: 1;
   text-align: center;
-  padding: 1rem;
-  font-size: 1rem;
-  color: #00000091;
-  background-color: #959595;
-  border-top: 1px solid #6d6d6d;
-  margin-top: 10rem;
+  padding: 1.25rem 1rem;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  margin-top: 4rem;
 }
 
+.footer p {
+  margin: 0;
+}

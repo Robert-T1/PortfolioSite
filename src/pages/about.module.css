@@ -1,68 +1,78 @@
-.aboutText {
-    max-width: 800px;
-    padding-bottom: 5%;
-    margin: 0 auto;
-    text-align: center;
-  }
+.about {
+  max-width: 800px;
+}
 
-  .about {
-    max-width: 900px;
-    margin-inline: auto;
-    padding: 2rem 1rem;
-  }
-  
-  .hero {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    align-items: center;
-  }
-  
-  .avatar {
-    width: 180px;
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-  
-  .intro {
-    flex: 1 1 260px;
-  }
-  
-  .tagline {
-    font-size: 1.1rem;
-    color: var(--accent);
-    margin: 0.25rem 0 1rem;
-  }
-  
-  .bio {
-    line-height: 1.6;
-    margin-bottom: 1rem;
-  }
+.hero {
+  margin-bottom: 2rem;
+}
 
-  .hoverImage {
-    position: relative;
-    cursor: pointer;
-    color: #284B63; 
-  }
-  
-  .popupImg {
-    position: absolute;
-    top: -120px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 150px;
-    border-radius: 6px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s ease;
-    z-index: 10;
-  }
-  
-  .hoverImage:hover .popupImg {
-    opacity: 1;
-  }
-  
-  
+.headshot {
+  width: clamp(140px, 25vw, 190px);
+  height: clamp(140px, 25vw, 190px);
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--surface);
+  box-shadow: var(--shadow-md);
+  margin-top: 1rem;
+}
 
-  
+.name {
+  font-size: clamp(1.4rem, 3.5vw, 1.8rem);
+  margin: 1rem 0 0.25rem;
+}
+
+.tagline {
+  font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.tagline p {
+  margin: 0.2rem 0;
+}
+
+.bioCard {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: clamp(1.25rem, 4vw, 2rem);
+  text-align: left;
+}
+
+.bio {
+  line-height: 1.7;
+  margin: 0 0 1rem;
+}
+
+.bio:last-child {
+  margin-bottom: 0;
+}
+
+.hoverImage {
+  position: relative;
+  cursor: pointer;
+  color: var(--accent);
+  font-weight: 600;
+  outline: none;
+}
+
+.popupImg {
+  position: absolute;
+  bottom: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(900px, 140vw);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.hoverImage:hover .popupImg,
+.hoverImage:focus .popupImg,
+.hoverImage:active .popupImg {
+  opacity: 1;
+}

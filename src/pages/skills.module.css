@@ -1,16 +1,103 @@
-.description { 
-    padding-bottom: 2%;
-    max-width: 800px;
-    margin: 0 auto;
-    text-align: center;
-  }
+.description {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  color: var(--ink-soft);
+}
 
-  .skillSection h3 { 
-    padding-top: 15%;
-    color: black;
-  }
+.legend {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
 
-  .skillSection h4 { 
-    padding-top: 5%;
-    font-style: italic;
+.searchWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+  margin-bottom: 2rem;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 0.9rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--ink-faint);
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.7rem 5.5rem 0.7rem 2.6rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  color: var(--ink);
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: var(--shadow-sm);
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.searchInput:focus {
+  border-color: var(--page-accent, var(--accent));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--page-accent, var(--accent)) 25%, transparent);
+}
+
+.searchInput::placeholder {
+  color: var(--ink-faint);
+}
+
+.searchCount {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ink-faint);
+  pointer-events: none;
+}
+
+.noResults {
+  color: var(--ink-soft);
+  margin: 2rem 0;
+}
+
+.groupGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+}
+
+.groupCard {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem 1.25rem 1.5rem;
+  text-align: left;
+}
+
+.groupTitle {
+  margin: 0 0 0.9rem;
+  font-size: 1rem;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media screen and (max-width: 480px) {
+  .groupGrid {
+    grid-template-columns: 1fr;
   }
+}

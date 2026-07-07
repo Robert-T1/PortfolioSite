@@ -1,55 +1,82 @@
 .btn {
-  padding: 8px 16px;
-  background-color: #3C6E71;
-  color: white;
+  padding: 0.5rem 1rem;
+  background-color: var(--accent);
+  color: var(--accent-ink);
   border: none;
   cursor: pointer;
-  font-weight: bold;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 5%;
-  transition: transform 0.2s, box-shadow 0.2s;
+  font-weight: 600;
+  font-size: 0.9rem;
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background-color 0.15s ease;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  user-select: none; 
+  user-select: none;
 }
 
 .btn_img {
   border: none;
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   padding: 0;
-  background: none; 
+  background: none;
   cursor: pointer;
   border-radius: 50%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  overflow: hidden; 
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
   display: inline-block;
-  transition: transform 0.2s, box-shadow 0.2s;
+  flex-shrink: 0;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
 
 .btn_img img {
-  width: 48px;
-  height: 48px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   object-fit: cover;
-  display: block; 
+  display: block;
+  pointer-events: none;
+}
+
+/* Flat icon button for transparent-background logos (no circular clip) */
+.btn_icon {
+  border: none;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: none;
+  cursor: pointer;
+  display: inline-block;
+  flex-shrink: 0;
+  filter: drop-shadow(0 2px 3px rgba(28, 32, 51, 0.25));
+  transition: transform 0.15s ease, filter 0.15s ease;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.btn_icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
   pointer-events: none;
 }
 
 .btn_project {
-  width: 126px;
-  height: 126px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   padding: 0;
   background: none;
   border: none;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  display: inline-block;
+  display: block;
   cursor: pointer;
   position: relative;
-  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
@@ -60,48 +87,39 @@
   object-fit: cover;
   display: block;
   image-rendering: pixelated;
-  image-rendering: crisp-edges; 
-  image-rendering: -moz-crisp-edges;
   pointer-events: none;
 }
 
 @media (hover: hover) {
   .btn:hover {
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
-      transform: scale(1.02);
+    background-color: var(--accent-strong);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
   }
 
   .btn_img:hover {
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-      transform: scale(1.01);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .btn_icon:hover {
+    filter: drop-shadow(0 4px 6px rgba(28, 32, 51, 0.3));
+    transform: translateY(-1px);
   }
 
   .btn_project:hover {
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
-      transform: scale(1.01);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-3px);
   }
 }
 
-.btn:active, .btn_img:active, .btn_project:active {
-  transform: scale(0.98);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+.btn:active,
+.btn_img:active,
+.btn_project:active {
+  transform: scale(0.97);
+  box-shadow: var(--shadow-sm);
 }
 
-.btn_project {
-  width: clamp(80px, 12vw, 120px);
-  height: clamp(80px, 12vw, 120px);
-  border-radius: 6px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn_project:hover {
-  transform: scale(1.05);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-@media screen and (max-width: 600px) {
-  .btn_project {
-    width: 100px;
-    height: 100px;
-  }
+.btn_icon:active {
+  transform: scale(0.95);
 }

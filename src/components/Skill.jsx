@@ -1,11 +1,16 @@
 import styles from './skill.module.css'
 
-function Skill({children}) {
+/**
+ * A small pill-shaped skill tag.
+ * Optional `tier` prop ("advanced" | "proficient" | "familiar") controls emphasis.
+ */
+function Skill({ children, tier }) {
+    const tierClass = tier && styles[tier] ? ` ${styles[tier]}` : '';
     return (
-        <div className={styles.skill}>
-            <p>{children}</p>
-        </div>
+        <span className={`${styles.skill}${tierClass}`}>
+            {children}
+        </span>
     );
- }
+}
 
- export default Skill;
+export default Skill;

@@ -1,8 +1,7 @@
-function Footer() 
-{ 
+function Footer() {
     return (
         <footer className="footer">
-            <p>© 2025 Robert Thompson. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} Robert Thompson. All rights reserved.</p>
         </footer>
     );
 }

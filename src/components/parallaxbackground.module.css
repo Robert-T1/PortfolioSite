@@ -1,0 +1,33 @@
+.parallax {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.layer {
+  position: absolute;
+  inset: 0;
+  will-change: transform;
+}
+
+.band {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.shape {
+  position: absolute;
+  display: block;
+  line-height: 0;
+}
+
+@media screen and (max-width: 600px) {
+  /* Slightly calmer on small screens */
+  .shape {
+    transform: scale(0.75);
+    transform-origin: top left;
+  }
+}

@@ -1,36 +1,55 @@
-.label {
-    font-weight: bold;
-    margin-bottom: 6px;
-    padding-left: 4px;
-  }
-  
-  .box {
-    width: 500px;
-    background-color: #284B63;
-    border-radius: 12px;
-    padding: 12px 16px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  }
-  
-  .description {
-    margin-bottom: 1.5rem;
-    color: white;
-  }
-  
-  .tenure {
-    position: absolute;
-    bottom: 8px;
-    left: 50%;
-    transform: translateX(-50%);
-    font-style: italic;
-    font-size: 0.85rem;
-    color: #f0f0f0;
-  }
+.card {
+  width: 100%;
+  max-width: 640px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 1.25rem;
+  text-align: left;
+}
 
-  .employmentType 
-  { 
-      font-style: italic;
-      font-size: 0.85rem;
-      color: rgb(255, 255, 255);
-  }
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.meta {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  flex-shrink: 0;
+}
+
+.employmentType {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent-strong);
+  background-color: var(--accent-soft);
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.tenure {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  white-space: nowrap;
+}
+
+.description {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.6;
+}

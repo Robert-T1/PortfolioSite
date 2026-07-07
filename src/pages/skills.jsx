@@ -1,124 +1,209 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState } from 'react';
 import styles from './skills.module.css';
-import SkillBar from '../components/SkillBar';
+import Skill from '../components/Skill';
+
+const skillGroups = [
+  {
+    title: 'Programming Languages',
+    skills: [
+      { name: 'C#', tier: 'advanced' },
+      { name: 'Python', tier: 'proficient' },
+      { name: 'JavaScript', tier: 'proficient' },
+      { name: 'Java', tier: 'proficient' },
+      { name: 'Lua', tier: 'proficient' },
+      { name: 'HTML', tier: 'proficient' },
+      { name: 'CSS', tier: 'proficient' },
+      { name: 'SQL', tier: 'proficient' },
+      { name: '.NET', tier: 'familiar' },
+      { name: 'PHP', tier: 'familiar' },
+    ],
+  },
+  {
+    title: 'Game Development',
+    skills: [
+      { name: 'Unity', tier: 'advanced' },
+      { name: 'Game Systems Programming', tier: 'advanced' },
+      { name: 'Multiplayer Networking with FishNet', tier: 'advanced' },
+      { name: 'Godot', tier: 'proficient' },
+      { name: 'Procedural Generation', tier: 'proficient' },
+      { name: 'Mobile Application Development with Unity', tier: 'proficient' },
+      { name: 'Unreal', tier: 'familiar' },
+      { name: 'Roblox Engine', tier: 'familiar' },
+      { name: 'VR/XR', tier: 'familiar' },
+      { name: 'Azure PlayFab', tier: 'familiar' },
+      { name: 'Unity Multiplay Hosting', tier: 'familiar' },
+    ],
+  },
+  {
+    title: 'Web Development',
+    skills: [
+      { name: 'React', tier: 'proficient' },
+      { name: 'Node.js', tier: 'proficient' },
+      { name: 'Express.js', tier: 'proficient' },
+      { name: 'REST APIs', tier: 'proficient' },
+      { name: 'WebSockets', tier: 'proficient' },
+      { name: 'Responsive Web Design', tier: 'proficient' },
+      { name: 'UI Design', tier: 'proficient' },
+      { name: 'Frontend/Backend Integration', tier: 'proficient' },
+      { name: 'JSON', tier: 'proficient' },
+      { name: 'Vite', tier: 'familiar' },
+      { name: 'Web Hosting', tier: 'familiar' },
+      { name: 'Browser Developer Tools', tier: 'familiar' },
+      { name: 'API Integration', tier: 'familiar' },
+    ],
+  },
+  {
+    title: 'Databases & Data',
+    skills: [
+      { name: 'MongoDB', tier: 'proficient' },
+      { name: 'Database Design', tier: 'familiar' },
+      { name: 'Subqueries', tier: 'familiar' },
+    ],
+  },
+  {
+    title: 'DevOps & Infrastructure',
+    skills: [
+      { name: 'Software Deployment', tier: 'advanced' },
+      { name: 'Cloudflare', tier: 'proficient' },
+      { name: 'Nginx', tier: 'proficient' },
+      { name: 'Docker', tier: 'familiar' },
+      { name: 'Docker Compose', tier: 'familiar' },
+      { name: 'Google Cloud Platform', tier: 'familiar' },
+      { name: 'Cloud Computing', tier: 'familiar' },
+      { name: 'Linux Command Line', tier: 'familiar' },
+      { name: 'Command Line Interfaces', tier: 'familiar' },
+      { name: 'Raspberry Pi', tier: 'familiar' },
+      { name: 'Hardware/Software Setup', tier: 'familiar' },
+    ],
+  },
+  {
+    title: 'Version Control',
+    skills: [
+      { name: 'Git', tier: 'proficient' },
+      { name: 'GitHub', tier: 'proficient' },
+      { name: 'Plastic SCM', tier: 'proficient' },
+      { name: 'Version Control', tier: 'proficient' },
+    ],
+  },
+  {
+    title: 'Testing & Quality',
+    skills: [
+      { name: 'Debugging', tier: 'advanced' },
+      { name: 'Troubleshooting', tier: 'advanced' },
+      { name: 'Software Testing', tier: 'proficient' },
+      { name: 'Bug Tracking', tier: 'proficient' },
+      { name: 'Performance Optimization', tier: 'proficient' },
+    ],
+  },
+  {
+    title: 'Computer Science Concepts',
+    skills: [
+      { name: 'Object-Oriented Programming (OOP)', tier: 'advanced' },
+      { name: 'Data Structures', tier: 'proficient' },
+      { name: 'Algorithms', tier: 'proficient' },
+      { name: 'Cross-Platform Development', tier: 'proficient' },
+      { name: 'Software Architecture', tier: 'familiar' },
+      { name: 'System Design', tier: 'familiar' },
+      { name: 'Networking Concepts', tier: 'familiar' },
+      { name: 'TCP/IP', tier: 'familiar' },
+      { name: 'Client-Server Architecture', tier: 'familiar' },
+      { name: 'Robotics', tier: 'familiar' },
+    ],
+  },
+  {
+    title: 'Professional Skills',
+    skills: [
+      { name: 'Communication', tier: 'advanced' },
+      { name: 'Customer Service', tier: 'advanced' },
+      { name: 'Technical Documentation', tier: 'proficient' },
+      { name: 'Application Support', tier: 'proficient' },
+    ],
+  },
+];
+
+const tiers = [
+  { id: 'advanced', label: 'Advanced' },
+  { id: 'proficient', label: 'Proficient' },
+  { id: 'familiar', label: 'Familiar' },
+];
 
 function Skills() {
-  const [animatedLevel, setAnimatedLevel] = useState(5);
-  const directionRef = useRef(1);
-  const requestRef = useRef();
-  
-  useEffect(() => {
-    let lastTimestamp = 0;
-    
-    const animate = (timestamp) => {
-      if (!lastTimestamp) lastTimestamp = timestamp;
-      const delta = timestamp - lastTimestamp;
-      
-      if (delta > 100) {
-        lastTimestamp = timestamp;
-        
-        setAnimatedLevel(prev => {
-          let next = prev + (directionRef.current * 1);
-          
-          if (next >= 100) {
-            directionRef.current = -1;
-            next = 100;
-          } else if (next <= 5) {
-            directionRef.current = 1;
-            next = 5;
-          }
-          
-          return next;
-        });
-      }
-      
-      requestRef.current = requestAnimationFrame(animate);
-    };
-    
-    requestRef.current = requestAnimationFrame(animate);
-    
-    return () => {
-      if (requestRef.current) {
-        cancelAnimationFrame(requestRef.current);
-      }
-    };
-  }, []); 
+  const [query, setQuery] = useState('');
+  const q = query.trim().toLowerCase();
+
+  const filteredGroups = skillGroups
+    .map(({ title, skills }) => ({
+      title,
+      skills: q ? skills.filter(({ name }) => name.toLowerCase().includes(q)) : skills,
+    }))
+    .filter(({ skills }) => skills.length > 0);
+
+  const matchCount = filteredGroups.reduce((sum, g) => sum + g.skills.length, 0);
 
   return (
-    <div className="container">
-      <h2 className={styles.sectionTitle}>SKILLS</h2>
+    <div className="container" style={{ '--page-accent': 'var(--c-green)' }}>
+      <h2 className="pageTitle">SKILLS</h2>
       <p className={styles.description}>
-        A self-evaluated list of notable skills, assessed based on time spent and familiarity with related technologies. 
-        This provides an honest representation of proficiency in the skill bars below.
+        A self-assessed overview of my notable skills, grouped by area and rated
+        by time spent and familiarity with the related technologies.
       </p>
-      
-      <div className={styles.animationDemo}>
-        <div className={styles.skillLevelIndicator}>
-          <SkillBar level={animatedLevel}>{getSkillLabel(animatedLevel)}</SkillBar>
+
+      <div className={styles.legend} aria-label="Proficiency legend">
+        {tiers.map(({ id, label }) => (
+          <span key={id} className={styles.legendItem}>
+            <Skill tier={id}>{label}</Skill>
+          </span>
+        ))}
+      </div>
+
+      <div className={styles.searchWrapper}>
+        <svg
+          className={styles.searchIcon}
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          aria-hidden="true"
+        >
+          <circle cx="11" cy="11" r="7" />
+          <line x1="16.5" y1="16.5" x2="21" y2="21" />
+        </svg>
+        <input
+          type="search"
+          className={styles.searchInput}
+          placeholder="Search skills… (e.g. React, Unity, SQL)"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          aria-label="Search skills"
+        />
+        {q && (
+          <span className={styles.searchCount} aria-live="polite">
+            {matchCount} {matchCount === 1 ? 'match' : 'matches'}
+          </span>
+        )}
+      </div>
+
+      {filteredGroups.length > 0 ? (
+        <div className={styles.groupGrid}>
+          {filteredGroups.map(({ title, skills }) => (
+            <section key={title} className={styles.groupCard}>
+              <h3 className={styles.groupTitle}>{title}</h3>
+              <div className={styles.chips}>
+                {skills.map(({ name, tier }) => (
+                  <Skill key={name} tier={tier}>{name}</Skill>
+                ))}
+              </div>
+            </section>
+          ))}
         </div>
-      </div>
-      
-      <div className={styles.skillSection}>
-        <h3>Programming Languages</h3>
-        <SkillBar level={80}>C#</SkillBar>
-        <SkillBar level={60}>JavaScript</SkillBar>
-        <SkillBar level={50}>C++</SkillBar>
-        <SkillBar level={50}>Lua</SkillBar>
-        <SkillBar level={45}>Python</SkillBar>
-        <SkillBar level={25}>C</SkillBar>
-
-        <h4>Declarative Languages</h4>
-        <SkillBar level={55}>HTML</SkillBar>
-        <SkillBar level={45}>CSS</SkillBar>
-
-        <h3>Technologies</h3> 
-        <SkillBar level={55}>MongdoDB</SkillBar>
-        <SkillBar level={55}>React</SkillBar>
-        <SkillBar level={55}>Node.js</SkillBar>
-        <SkillBar level={35}>Docker</SkillBar>
-
-        <h4>Version Control</h4>
-        <SkillBar level={60}>Plastic SCM</SkillBar>
-        <SkillBar level={50}>Git</SkillBar>
-
-        <h4>Game Engines</h4>
-        <SkillBar level={75}>Unity</SkillBar>
-        <SkillBar level={45}>Godot</SkillBar>
-        <SkillBar level={35}>Unreal</SkillBar>
-
-        <h4>Specifications</h4>
-        <SkillBar level={35}>OpenGL</SkillBar>
-        <SkillBar level={20}>DirectX</SkillBar>
-
-        <h3>Testing & QA</h3>
-        <SkillBar level={70}>Manual Game Testing</SkillBar>
-        <SkillBar level={50}>Unity Test Framework</SkillBar>
-        <SkillBar level={40}>Vitest</SkillBar>
-
-        <h3>Networking & Infrastructure</h3>
-        <SkillBar level={65}>Client-Server Architecture</SkillBar>
-        <SkillBar level={60}>Socket Networking</SkillBar>
-        <SkillBar level={55}>Cloud Deployment</SkillBar>
-
-
-        <h3> Programming Concepts</h3>
-        <SkillBar level={80}>Component-Based Architecture</SkillBar>
-        <SkillBar level={80}>OOP</SkillBar>
-        <SkillBar level={75}>Debugging & Profiling</SkillBar>
-        <SkillBar level={55}>Unit Testing</SkillBar>
-        <SkillBar level={45}>ECS</SkillBar>
-
-      </div>
+      ) : (
+        <p className={styles.noResults}>
+          No skills matching &ldquo;{query}&rdquo; — but I&rsquo;m a fast learner!
+        </p>
+      )}
     </div>
   );
-}
-
-function getSkillLabel(level) {
-  if (level <= 20) return 'Novice';
-  if (level <= 40) return 'Familiar';
-  if (level <= 60) return 'Intermediate';
-  if (level <= 80) return 'Advanced';
-  return 'Expert';
 }
 
 export default Skills;

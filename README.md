@@ -12,17 +12,6 @@ It was rebuilt from my original static HTML/CSS/JS version into a more modern, f
 - **Timeline** → Chronological view of career milestones  
 - **About** → Profile, bio, and background  
 
-## Tech Stack
-- **Frontend:** React (with TailwindCSS + shadcn/ui)  
-- **Backend / Auth:** Node.js (planned server-side authentication)  
-- **Deployment:** Vercel  
-
-## Features
-- Responsive and modern design  
-- Clean UI with animations and grid-based layout  
-- Organized sections for easy navigation  
-- Source code structured for scalability  
-
 ## Development
 You can follow the development process here: https://trello.com/b/OJpdBZNv/portfoilo-website  
 

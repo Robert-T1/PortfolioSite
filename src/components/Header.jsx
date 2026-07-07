@@ -47,7 +47,7 @@ function Header() {
             <div className={styles.headerContent}>
                 <Link to="/" className={styles.brand}>
                     <span className={styles.brandName}>Robert Thompson</span>
-                    <span className={styles.brandRole}>Game & Software Developer</span>
+                    <span className={styles.brandRole}>Software Developer</span>
                 </Link>
 
                 <nav className={styles.navLinks} aria-label="Main navigation">

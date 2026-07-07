@@ -17,7 +17,7 @@ export default function About() {
         <div className={styles.tagline}>
           <p>Early career with lots of experience.</p>
           <p>Pursuing a Bachelor&rsquo;s degree in Computer Science at Western Governors University.</p>
-          <p>Built and shipped real software through independent game studio RELT Games.</p>
+          <p>Built and shipped real software through my independent studio, RELT Games.</p>
         </div>
       </div>
 
